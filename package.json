@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run deploy\" \"npm run frontend\"",
+    "deploy": "hardhat run scripts/deploy.js",
+    "test-contracts": "hardhat test",
+    "frontend": "cd client && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "ethers": "^5.0.0",
+    "concurrently": "^7.0.0" 
+  }
+}
